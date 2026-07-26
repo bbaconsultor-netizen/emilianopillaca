@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuestas — Emiliano Pillaca, Consejero Regional por Nasca</title>
+<meta name="description" content="Plan de trabajo de Emiliano Pillaca: 40 propuestas en 8 ejes para Nasca, Vista Alegre, Marcona, Changuillo y El Ingenio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#EFE9DD;
+    --sand-deep:#E3DBC8;
+    --indigo:#075A7C;      /* celeste oscuro — misma familia que el logo "R" */
+    --indigo-deep:#053F58; /* celeste aún más profundo, para máximo contraste */
+    --celeste-tint:#E4F4FB; /* celeste muy claro para fondos alternos */
+    --ochre:#0E93C4; /* celeste oficial del símbolo "R" de Renovación Popular */
+    --red:#0B7BAA;   /* celeste profundo para acentos/CTA */
+    --ink:#221F1A;
+    --line:rgba(14,147,196,0.35);
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--sand);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ochre);
+  }
+
+  /* Skip link / focus */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:3px solid var(--indigo); outline-offset:2px;
+  }
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(239,233,221,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+  .brand{font-family:'Fraunces', serif; font-weight:700; font-size:1.15rem; letter-spacing:-0.01em;}
+  .brand span{color:var(--ochre);}
+  nav.links{display:flex; gap:28px; font-size:0.92rem;}
+  nav.links a{text-decoration:none; opacity:0.8; transition:opacity .2s;}
+  nav.links a:hover{opacity:1;}
+  .btn{
+    display:inline-block;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.9rem;
+    padding:11px 22px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--red); color:#fff;}
+  .btn-primary:hover{box-shadow:0 6px 18px rgba(200,16,46,0.35);}
+  .btn-ghost{background:transparent; color:var(--indigo); border-color:var(--indigo);}
+  .nav-cta{display:none;}
+  @media(min-width:760px){ .nav-cta{display:inline-block;} }
+  .menu-toggle{display:none; background:none; border:none; font-size:1.4rem;}
+  @media(max-width:759px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:var(--indigo);
+    color:var(--sand);
+    overflow:hidden;
+    padding:96px 0 80px;
+  }
+  .hero svg.lines{
+    position:absolute; inset:0; width:100%; height:100%;
+    opacity:0.5;
+  }
+  .hero-inner{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns:1fr; gap:48px; align-items:center;
+  }
+  @media(min-width:860px){
+    .hero-inner{grid-template-columns:1.15fr 0.85fr; gap:40px;}
+  }
+  .hero .eyebrow{color:var(--ochre);}
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.4rem);
+    line-height:1.02;
+    margin:14px 0 20px;
+    color:#fff;
+  }
+  .hero p.lead{
+    font-size:1.15rem;
+    max-width:52ch;
+    color:rgba(239,233,221,0.86);
+    margin-bottom:32px;
+  }
+  .hero-actions{display:flex; flex-wrap:wrap; gap:14px;}
+  .btn-on-dark{background:transparent; color:#fff; border-color:rgba(255,255,255,0.4);}
+  .btn-on-dark:hover{border-color:#fff;}
+
+  .portrait{
+    position:relative;
+    justify-self:center;
+  }
+  .portrait-frame{
+    width:min(280px, 70vw);
+    border:1px solid rgba(14,147,196,0.55);
+    padding:14px;
+    background:rgba(16,26,48,0.4);
+  }
+  .portrait-frame img{
+    filter:grayscale(0.15) contrast(1.05);
+    border:1px solid rgba(239,233,221,0.15);
+  }
+  .portrait-cap{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    color:var(--ochre);
+    text-transform:uppercase;
+    margin-top:10px;
+    text-align:center;
+  }
+
+  section{padding:88px 0;}
+  .section-head{max-width:60ch; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.6rem); margin-top:10px;}
+  .section-head p{font-size:1.02rem; opacity:0.78; margin-top:14px;}
+
+  /* TIMELINE */
+  #trayectoria{background:var(--celeste-tint);}
+  .timeline{position:relative; margin-top:10px;}
+  .timeline::before{
+    content:""; position:absolute; left:86px; top:6px; bottom:6px; width:1px;
+    background:var(--line);
+  }
+  @media(max-width:640px){ .timeline::before{left:20px;} }
+  .t-item{
+    position:relative;
+    display:grid; grid-template-columns:86px 1fr; gap:28px;
+    padding:22px 0;
+  }
+  @media(max-width:640px){
+    .t-item{grid-template-columns:20px 1fr; gap:18px;}
+    .t-item .t-year{position:absolute; top:-18px; left:0; font-size:0.68rem;}
+  }
+  .t-year{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--ochre);
+    padding-top:3px;
+  }
+  .t-dot{
+    position:absolute; left:82px; width:9px; height:9px; border-radius:50%;
+    background:var(--red); margin-top:8px;
+  }
+  @media(max-width:640px){ .t-dot{left:16px;} }
+  .t-content h3{font-size:1.08rem; font-weight:600; margin-bottom:4px;}
+  .t-content p{font-size:0.92rem; opacity:0.75;}
+
+  /* PILARES */
+  #propuestas{background:var(--sand);}
+  .pillars{
+    display:grid; grid-template-columns:1fr; gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  @media(min-width:720px){ .pillars{grid-template-columns:repeat(2, 1fr);} }
+  .pillar{background:var(--sand); padding:36px;}
+  .pillar .num{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ochre); font-size:0.8rem;
+  }
+  .pillar h3{font-size:1.2rem; margin:12px 0 10px;}
+  .pillar p{font-size:0.94rem; opacity:0.78;}
+
+  /* SOBRE */
+  #sobre{background:var(--indigo-deep); color:var(--sand);}
+  #sobre .section-head p{color:rgba(239,233,221,0.8);}
+  .credentials{display:grid; gap:18px; margin-top:36px;}
+  @media(min-width:640px){ .credentials{grid-template-columns:repeat(2,1fr);} }
+  .credential{
+    border:1px solid rgba(14,147,196,0.35);
+    padding:20px 22px;
+  }
+  .credential .k{font-family:'IBM Plex Mono', monospace; font-size:0.7rem; color:var(--ochre); text-transform:uppercase; letter-spacing:0.08em;}
+  .credential .v{margin-top:8px; font-size:0.98rem;}
+
+  /* FORM */
+  #contacto{background:var(--celeste-tint);}
+  .form-grid{display:grid; grid-template-columns:1fr; gap:48px;}
+  @media(min-width:900px){ .form-grid{grid-template-columns:0.9fr 1.1fr;} }
+  .form-side p{opacity:0.78; margin-top:14px;}
+  .form-side .contact-line{
+    margin-top:26px; font-family:'IBM Plex Mono', monospace; font-size:0.86rem;
+  }
+  form{
+    background:var(--sand);
+    border:1px solid var(--line);
+    padding:32px;
+  }
+  .field{margin-bottom:18px;}
+  .field label{display:block; font-size:0.85rem; font-weight:600; margin-bottom:6px;}
+  .field input, .field textarea, .field select{
+    width:100%;
+    font-family:'Inter', sans-serif;
+    font-size:0.95rem;
+    padding:11px 12px;
+    border:1px solid rgba(34,31,26,0.25);
+    background:#fff;
+    border-radius:var(--radius);
+  }
+  .field textarea{min-height:100px; resize:vertical;}
+  .check-row{display:flex; align-items:flex-start; gap:10px; margin-bottom:20px;}
+  .check-row input{width:auto; margin-top:4px;}
+  .check-row label{font-size:0.9rem; font-weight:400;}
+  .form-note{font-size:0.78rem; opacity:0.65; margin-top:14px;}
+  #form-status{margin-top:14px; font-size:0.9rem; display:none;}
+  #form-status.ok{color:#1a6b3a; display:block;}
+  #form-status.err{color:var(--red); display:block;}
+
+  footer{background:var(--indigo-deep); color:rgba(239,233,221,0.7); padding:44px 0 30px; font-size:0.85rem;}
+  footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; align-items:center;}
+  footer .disclaimer{width:100%; margin-top:22px; font-size:0.72rem; opacity:0.55; border-top:1px solid rgba(239,233,221,0.12); padding-top:16px;}
+</style>
+
+<style>
+  .prop-hero{background:var(--indigo-deep); color:var(--sand); padding:70px 0 56px;}
+  .prop-hero h1{font-size:clamp(2rem,5vw,3.2rem); color:#fff; line-height:1.05; margin:14px 0 18px;}
+  .prop-hero p{max-width:60ch; color:rgba(239,233,221,0.85); font-size:1.05rem;}
+  .distritos{margin-top:26px; font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--ochre); letter-spacing:0.05em;}
+
+  .eje-block{padding:64px 0; border-bottom:1px solid var(--line);}
+  .eje-block:nth-child(even){background:var(--celeste-tint);}
+  .eje-label{font-family:'IBM Plex Mono',monospace; font-size:0.74rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ochre);}
+  .eje-block h2{font-size:clamp(1.6rem,3.2vw,2.3rem); margin:10px 0 34px; max-width:22ch;}
+
+  .prop{border-top:1px solid var(--line); padding:26px 0; display:grid; grid-template-columns:56px 1fr; gap:22px;}
+  .prop-n{font-family:'IBM Plex Mono',monospace; font-size:1.1rem; color:var(--ochre); padding-top:2px;}
+  .prop h3{font-size:1.12rem; margin-bottom:10px;}
+  .prop p{font-size:0.95rem; opacity:0.82; margin-bottom:10px; max-width:70ch;}
+  .prop ul{margin:8px 0 0 18px; font-size:0.92rem; opacity:0.8;}
+  .prop ul li{margin-bottom:4px;}
+  .destacado{border-left:3px solid var(--ochre); padding-left:16px; margin-top:12px; font-size:0.92rem; font-style:italic; opacity:0.9;}
+
+  .cierre{background:var(--indigo-deep); color:var(--sand); padding:72px 0;}
+  .cierre h2{color:#fff; font-size:clamp(1.6rem,3.4vw,2.4rem); max-width:24ch;}
+  .cierre p{margin-top:18px; max-width:62ch; color:rgba(239,233,221,0.85);}
+  .lema{margin-top:30px; font-family:'Fraunces',serif; font-size:clamp(1.15rem,2.6vw,1.6rem); color:#fff; line-height:1.3;}
+</style>
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand" style="display:flex; align-items:center; gap:10px;">
+      <span style="width:28px; height:28px; border:2px solid var(--ochre); display:inline-flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; color:var(--ochre); font-size:1rem;">R</span>
+      <a href="index.html" style="text-decoration:none; color:inherit;">PILLACA <span>· ICA</span></a>
+    </div>
+    <nav class="links">
+      <a href="index.html#trayectoria">Trayectoria</a>
+      <a href="index.html#propuestas">Ejes</a>
+      <a href="index.html#sobre">Sobre Emiliano</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <a href="index.html#contacto" class="btn btn-primary nav-cta">Sé voluntario</a>
+  </div>
+</header>
+
+<section class="prop-hero">
+  <div class="wrap">
+    <div class="eyebrow">Plan de trabajo · 40 propuestas</div>
+    <h1>Propuestas para la provincia de Nasca</h1>
+    <p>Nasca necesita una representación regional que conozca la administración pública, defienda los intereses de la provincia y gestione proyectos que respondan a las verdaderas necesidades de su población.</p>
+    <p style="margin-top:14px;">Como consejero regional, Emiliano Pillaca impulsará la aprobación de acuerdos, la asignación de presupuesto, la fiscalización de las obras y la articulación con el Gobierno Regional de Ica, los ministerios, las municipalidades, las organizaciones sociales y el sector privado.</p>
+    <div class="distritos">NASCA · VISTA ALEGRE · MARCONA · CHANGUILLO · EL INGENIO</div>
+  </div>
+</section>
+
+<section class="eje-block" id="eje1"><div class="wrap"><div class="eje-label">Eje 1</div><h2>Salud, saneamiento y calidad de vida</h2>
+    <div class="prop">
+      <div class="prop-n">01</div>
+      <div>
+        <h3>Nuevo Hospital de Nasca en Cajuca</h3>
+        <p>Impulsar y fiscalizar la formulación, financiamiento y construcción del nuevo Hospital de Nasca en el sector de Cajuca.</p>
+        <p>El nuevo establecimiento deberá contar con infraestructura moderna, médicos especialistas, equipos de diagnóstico, laboratorios, ambulancias, áreas de emergencia y capacidad suficiente para atender a toda la provincia.</p>
+        <div class="destacado">Nasca necesita un hospital que evite que los pacientes tengan que viajar permanentemente a Ica o Lima para recibir atención especializada.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">02</div>
+      <div>
+        <h3>Culminación de las lagunas de oxidación de Nasca</h3>
+        <p>Gestionar la reactivación y culminación definitiva del proyecto de las lagunas de oxidación, paralizado desde el año 2010.</p>
+        <p>Permitirá mejorar el tratamiento de aguas residuales, proteger la salud de la población, reducir la contaminación ambiental y aprovechar de manera segura el agua tratada para actividades productivas.</p>
+        <p>Se fiscalizarán las causas de la paralización, el estado de la infraestructura, los recursos utilizados y las acciones necesarias para culminarlo.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">03</div>
+      <div>
+        <h3>Fortalecimiento de los centros y puestos de salud</h3>
+        <p>Promover la modernización de los establecimientos de salud de Nasca, Vista Alegre, Marcona, Changuillo y El Ingenio.</p>
+        <p>Se gestionará la contratación de personal médico, el abastecimiento de medicamentos, la implementación de laboratorios, la adquisición de ambulancias y la ampliación de los servicios de atención primaria.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">04</div>
+      <div>
+        <h3>Gestión integral de residuos sólidos</h3>
+        <p>Impulsar una solución provincial para la recolección, tratamiento, reciclaje y disposición final de los residuos sólidos.</p>
+        <p>Se promoverá la eliminación progresiva de los botaderos informales, la segregación de residuos y la implementación de infraestructura ambiental adecuada.</p>
+      </div>
+    </div>
+</div></section>
+<section class="eje-block" id="eje2"><div class="wrap"><div class="eje-label">Eje 2</div><h2>Educación, juventud y formación para el trabajo</h2>
+    <div class="prop">
+      <div class="prop-n">05</div>
+      <div>
+        <h3>Construcción del nuevo colegio Simón Rodríguez de Nasca</h3>
+        <p>Impulsar la formulación, financiamiento y construcción de una infraestructura moderna para la institución educativa Simón Rodríguez.</p>
+        <p>El proyecto deberá incluir aulas adecuadas, laboratorios, talleres tecnológicos, biblioteca, espacios deportivos, servicios higiénicos y equipamiento digital.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">06</div>
+      <div>
+        <h3>Culminación de los colegios paralizados o abandonados</h3>
+        <p>Fiscalizar e impulsar la culminación de las instituciones educativas paralizadas, abandonadas o con expedientes técnicos deficientes.</p>
+        <div class="destacado">Se elaborará una relación pública de los colegios inconclusos, con su presupuesto, avance físico, problemas contractuales, responsables y fecha prevista de culminación.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">07</div>
+      <div>
+        <h3>Programa de becas y formación técnica para jóvenes</h3>
+        <p>Promover convenios y programas de becas para jóvenes de la provincia en especialidades vinculadas con agricultura, minería, turismo, tecnología, construcción, salud, servicios aeroportuarios, logística y actividades portuarias.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">08</div>
+      <div>
+        <h3>Educación tecnológica y emprendimiento</h3>
+        <p>Impulsar la implementación de laboratorios de computación, programación, robótica, inteligencia artificial, innovación y emprendimiento en las instituciones educativas.</p>
+        <p>La educación debe preparar a los jóvenes para las nuevas oportunidades laborales y productivas de la provincia.</p>
+      </div>
+    </div>
+</div></section>
+<section class="eje-block" id="eje3"><div class="wrap"><div class="eje-label">Eje 3</div><h2>Descentralización, gestión pública y transparencia</h2>
+    <div class="prop">
+      <div class="prop-n">09</div>
+      <div>
+        <h3>Recuperación de la autonomía de la Gerencia Subregional de Nasca</h3>
+        <p>Modernizar y fortalecer la Gerencia Subregional de Nasca, devolviéndole capacidad técnica, administrativa y operativa.</p>
+        <p>Nasca debe contar con una institución que pueda gestionar proyectos, supervisar obras y atender directamente las necesidades de la provincia, sin depender permanentemente de las decisiones adoptadas en la ciudad de Ica.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">10</div>
+      <div>
+        <h3>Creación de la Unidad Formuladora Subregional de Nasca</h3>
+        <p>Promover la creación y fortalecimiento de una Unidad Formuladora de proyectos dentro de la Gerencia Subregional.</p>
+        <p>Deberá contar con ingenieros, arquitectos, economistas y especialistas en presupuesto, saneamiento, agricultura, turismo y desarrollo productivo.</p>
+        <div class="destacado">Su función será formular proyectos desde Nasca y evitar que las iniciativas provinciales permanezcan durante años sin expediente técnico.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">11</div>
+      <div>
+        <h3>Banco Provincial de Proyectos</h3>
+        <p>Crear una cartera priorizada de proyectos para Nasca, Vista Alegre, Marcona, Changuillo y El Ingenio.</p>
+        <p>Cada proyecto deberá contar con información sobre su estado, presupuesto, expediente técnico, fuente de financiamiento, entidad responsable y cronograma de ejecución.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">12</div>
+      <div>
+        <h3>Observatorio ciudadano de obras públicas</h3>
+        <p>Promover una plataforma digital de transparencia para que la población pueda conocer:</p>
+        <ul>
+          <li>Presupuesto de cada obra</li>
+          <li>Empresa contratista</li>
+          <li>Entidad supervisora</li>
+          <li>Plazo de ejecución</li>
+          <li>Avance físico y financiero</li>
+          <li>Adicionales de obra</li>
+          <li>Paralizaciones</li>
+          <li>Responsables de los retrasos</li>
+        </ul>
+        <div class="destacado">La población tiene derecho a saber cómo se utiliza el presupuesto regional.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">13</div>
+      <div>
+        <h3>Rendición de cuentas permanente</h3>
+        <p>Realizar informes públicos y descentralizados sobre las gestiones, acuerdos, fiscalizaciones y proyectos impulsados desde el Consejo Regional.</p>
+        <div class="destacado">El consejero regional debe informar periódicamente a la población y no aparecer únicamente durante las campañas electorales.</div>
+      </div>
+    </div>
+</div></section>
+<section class="eje-block" id="eje4"><div class="wrap"><div class="eje-label">Eje 4</div><h2>Infraestructura, transporte y conectividad</h2>
+    <div class="prop">
+      <div class="prop-n">14</div>
+      <div>
+        <h3>Impulso al muelle y desarrollo portuario de Marcona</h3>
+        <p>Gestionar ante el Gobierno Regional, el Gobierno Nacional y el sector privado el destrabe y desarrollo del proyecto portuario de Marcona.</p>
+        <p>El puerto debe convertirse en una oportunidad para generar empleo, comercio, industria, servicios logísticos y desarrollo económico para toda la provincia.</p>
+        <div class="destacado">Se exigirá que los proyectos portuarios respeten el ambiente, generen empleo local y produzcan beneficios concretos para la población de Marcona y Nasca.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">15</div>
+      <div>
+        <h3>Impulso a la construcción del Aeropuerto de Nasca</h3>
+        <p>Impulsar el saneamiento físico-legal del terreno, los estudios técnicos, la formulación del proyecto y la búsqueda de financiamiento para el nuevo aeropuerto o aeródromo de Nasca.</p>
+        <p>El proyecto permitirá fortalecer:</p>
+        <ul>
+          <li>La actividad turística</li>
+          <li>La aviación general</li>
+          <li>La capacitación aeronáutica</li>
+          <li>La atención de emergencias</li>
+          <li>La conectividad con Marcona</li>
+          <li>La inversión privada</li>
+          <li>El desarrollo económico provincial</li>
+        </ul>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">16</div>
+      <div>
+        <h3>Asfaltado de las vías departamentales</h3>
+        <p>Gestionar la rehabilitación, mejoramiento y asfaltado de las carreteras departamentales que conectan los distritos, centros poblados, zonas agrícolas y atractivos turísticos.</p>
+        <p>Las vías departamentales deben mantenerse transitables durante todo el año.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">17</div>
+      <div>
+        <h3>Pavimentación de vías vecinales</h3>
+        <p>Promover convenios entre el Gobierno Regional, las municipalidades y el Ministerio de Transportes y Comunicaciones para pavimentar vías vecinales, caminos productivos y accesos rurales.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">18</div>
+      <div>
+        <h3>Corredores productivos y turísticos</h3>
+        <p>Priorizar carreteras que conecten las zonas agrícolas, centros de producción, mercados, atractivos turísticos, puertos y centros poblados.</p>
+        <p>Una mejor conectividad permitirá reducir los costos de transporte y facilitar la comercialización de productos.</p>
+      </div>
+    </div>
+</div></section>
+<section class="eje-block" id="eje5"><div class="wrap"><div class="eje-label">Eje 5</div><h2>Seguridad hídrica y prevención de desastres</h2>
+    <div class="prop">
+      <div class="prop-n">19</div>
+      <div>
+        <h3>Represamiento de los ríos Aja, Tierras Blancas, Trancas y El Ingenio</h3>
+        <p>Impulsar los estudios técnicos, ambientales, geológicos e hidrológicos para el represamiento y aprovechamiento sostenible de las aguas de estos cuatro ríos.</p>
+        <p>Se gestionará la construcción de represas, reservorios y estructuras de regulación que permitan almacenar el agua durante las temporadas de avenida y utilizarla durante los meses de escasez.</p>
+        <p>El proyecto tendrá como objetivos:</p>
+        <ul>
+          <li>Garantizar agua para la agricultura</li>
+          <li>Contribuir a la recarga de los acuíferos</li>
+          <li>Reducir la sobreexplotación de los pozos</li>
+          <li>Recuperar y ampliar la frontera agrícola</li>
+          <li>Proteger a la población frente a inundaciones</li>
+          <li>Disponer de reservas para los periodos de sequía</li>
+          <li>Mejorar la productividad de los agricultores</li>
+        </ul>
+        <div class="destacado">El agua de las temporadas de lluvia no debe perderse. Debe almacenarse para producir alimentos, generar empleo y asegurar el futuro de Nasca.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">20</div>
+      <div>
+        <h3>Sistema integrado de almacenamiento y distribución del agua</h3>
+        <p>Promover un sistema que articule las futuras represas con bocatomas, canales, reservorios, pozos, sistemas de recarga hídrica y riego tecnificado.</p>
+        <p>El agua almacenada deberá distribuirse de manera eficiente y transparente, priorizando el consumo humano y la pequeña y mediana agricultura.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">21</div>
+      <div>
+        <h3>Construcción de defensas ribereñas definitivas</h3>
+        <p>Impulsar la construcción de defensas ribereñas permanentes en los ríos y quebradas de la provincia. Las obras deberán proteger:</p>
+        <ul>
+          <li>Viviendas</li>
+          <li>Terrenos agrícolas</li>
+          <li>Carreteras</li>
+          <li>Puentes</li>
+          <li>Bocatomas</li>
+          <li>Canales</li>
+          <li>Instituciones educativas</li>
+          <li>Servicios públicos</li>
+        </ul>
+        <div class="destacado">Se dejarán atrás las intervenciones temporales que se destruyen en cada temporada de lluvias.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">22</div>
+      <div>
+        <h3>Construcción y modernización de bocatomas</h3>
+        <p>Gestionar la construcción, rehabilitación y automatización de bocatomas para garantizar una captación segura y eficiente del agua.</p>
+        <p>Deberán diseñarse para resistir las avenidas de los ríos y facilitar la distribución hacia los valles agrícolas.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">23</div>
+      <div>
+        <h3>Construcción y revestimiento de canales de derivación</h3>
+        <p>Impulsar la construcción, ampliación y revestimiento de canales para reducir las pérdidas de agua por filtración.</p>
+        <p>También se promoverá la recuperación de los canales existentes y la instalación de sistemas de medición y control.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">24</div>
+      <div>
+        <h3>Plan provincial de siembra, cosecha y recarga de agua</h3>
+        <p>Promover reservorios, qochas, zanjas de infiltración, recuperación de acuíferos y otras soluciones para almacenar el agua y mejorar la disponibilidad hídrica de la provincia.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">25</div>
+      <div>
+        <h3>Mesa técnica para la seguridad hídrica de Nasca</h3>
+        <p>Gestionar una mesa técnica integrada por:</p>
+        <ul>
+          <li>Gobierno Regional de Ica</li>
+          <li>Municipalidades provinciales y distritales</li>
+          <li>Autoridad Nacional del Agua</li>
+          <li>Ministerio de Desarrollo Agrario y Riego</li>
+          <li>Juntas de usuarios</li>
+          <li>Comisiones de regantes</li>
+          <li>Agricultores</li>
+          <li>Universidades y especialistas</li>
+        </ul>
+        <div class="destacado">Esta mesa deberá elaborar una hoja de ruta, priorizar los proyectos hídricos y gestionar su financiamiento.</div>
+      </div>
+    </div>
+</div></section>
+<section class="eje-block" id="eje6"><div class="wrap"><div class="eje-label">Eje 6</div><h2>Agricultura, agroindustria y energía limpia</h2>
+    <div class="prop">
+      <div class="prop-n">26</div>
+      <div>
+        <h3>Electrificación solar de los pozos agrícolas</h3>
+        <p>Impulsar la instalación de paneles solares para el funcionamiento de los pozos y sistemas de bombeo agrícola.</p>
+        <p>Permitirá reducir el gasto en electricidad y combustible, disminuir los costos de producción y promover el uso de energía limpia.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">27</div>
+      <div>
+        <h3>Riego tecnificado</h3>
+        <p>Promover la instalación de sistemas de riego por goteo, aspersión y monitoreo inteligente, priorizando a los pequeños y medianos agricultores.</p>
+        <p>El objetivo será utilizar mejor el agua, reducir las pérdidas y aumentar la productividad.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">28</div>
+      <div>
+        <h3>Industrialización de la agricultura</h3>
+        <p>Impulsar la instalación de plantas de selección, procesamiento, transformación, empaque, refrigeración y conservación de productos agrícolas.</p>
+        <div class="destacado">Nasca no debe limitarse a vender materia prima. Debe transformar sus productos, generar marcas propias y acceder a nuevos mercados.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">29</div>
+      <div>
+        <h3>Fortalecimiento de las cadenas productivas</h3>
+        <p>Promover cadenas productivas para la uva, palta, pecana, mango, cítricos, pallar, maíz, algodón y otros productos con potencial comercial.</p>
+        <p>Se facilitará la asistencia técnica, certificación, asociatividad, financiamiento y comercialización.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">30</div>
+      <div>
+        <h3>Centro de innovación y desarrollo agroindustrial</h3>
+        <p>Gestionar la creación de un centro especializado que brinde:</p>
+        <ul>
+          <li>Análisis de suelos y agua</li>
+          <li>Asistencia técnica</li>
+          <li>Control de calidad</li>
+          <li>Transferencia tecnológica</li>
+          <li>Desarrollo de nuevos productos</li>
+          <li>Certificaciones</li>
+          <li>Capacitación</li>
+          <li>Apoyo para ingresar a nuevos mercados</li>
+        </ul>
+      </div>
+    </div>
+</div></section>
+<section class="eje-block" id="eje7"><div class="wrap"><div class="eje-label">Eje 7</div><h2>Empleo, emprendimiento y desarrollo de las MYPES</h2>
+    <div class="prop">
+      <div class="prop-n">31</div>
+      <div>
+        <h3>Fortalecimiento de PROCOMPITE</h3>
+        <p>Impulsar una mayor asignación de recursos regionales para PROCOMPITE, priorizando a asociaciones, agricultores, ganaderos, pescadores, artesanos, comerciantes, emprendedores y prestadores turísticos de la provincia.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">32</div>
+      <div>
+        <h3>Acceso a Agroideas, Agro Rural, ProInnóvate y otros fondos</h3>
+        <p>Promover la participación de las organizaciones y empresas de Nasca en programas como:</p>
+        <ul>
+          <li>Agroideas</li>
+          <li>Agro Rural</li>
+          <li>ProInnóvate</li>
+          <li>Turismo Emprende</li>
+          <li>PROCOMPITE</li>
+          <li>Fondos de ciencia, tecnología e innovación</li>
+          <li>Programas de apoyo a las MYPES</li>
+        </ul>
+        <div class="destacado">Se brindará asistencia técnica para formular planes de negocio y proyectos competitivos.</div>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">33</div>
+      <div>
+        <h3>Ventanilla de apoyo al emprendedor</h3>
+        <p>Promover una oficina de orientación para ayudar a los emprendedores y pequeñas empresas en:</p>
+        <ul>
+          <li>Formalización</li>
+          <li>Elaboración de planes de negocio</li>
+          <li>Acceso a financiamiento</li>
+          <li>Transformación digital</li>
+          <li>Registro de marcas</li>
+          <li>Registros sanitarios</li>
+          <li>Certificaciones</li>
+          <li>Comercio electrónico</li>
+          <li>Participación en fondos concursables</li>
+        </ul>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">34</div>
+      <div>
+        <h3>Compras públicas a productores y empresas locales</h3>
+        <p>Promover, dentro del marco legal, mecanismos para que las instituciones públicas adquieran productos y servicios de productores, asociaciones y pequeñas empresas de la provincia.</p>
+        <div class="destacado">El presupuesto público también debe contribuir a dinamizar la economía local.</div>
+      </div>
+    </div>
+</div></section>
+<section class="eje-block" id="eje8"><div class="wrap"><div class="eje-label">Eje 8</div><h2>Turismo, cultura e identidad</h2>
+    <div class="prop">
+      <div class="prop-n">35</div>
+      <div>
+        <h3>Fortalecimiento de la DIRCETUR en Nasca</h3>
+        <p>Promover el fortalecimiento técnico, institucional y presupuestal de la Dirección Regional de Comercio Exterior y Turismo.</p>
+        <p>Nasca necesita una presencia permanente de la autoridad regional de turismo, con capacidad para formular proyectos, brindar asistencia técnica y promocionar el destino.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">36</div>
+      <div>
+        <h3>Puesta en valor de los atractivos turísticos</h3>
+        <p>Gestionar proyectos para conservar, señalizar, proteger y promocionar los principales atractivos turísticos de Nasca y su entorno:</p>
+        <ul>
+          <li>Líneas y Geoglifos de Nasca y Palpa</li>
+          <li>Cahuachi</li>
+          <li>Acueductos de Nasca</li>
+          <li>Paredones</li>
+          <li>Chauchilla</li>
+          <li>Cerro Blanco</li>
+          <li>Reserva Nacional San Fernando</li>
+          <li>Atractivos naturales y culturales de Marcona</li>
+          <li>Recursos turísticos de Changuillo y El Ingenio</li>
+        </ul>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">37</div>
+      <div>
+        <h3>Circuito turístico provincial Nasca–Marcona–Palpa</h3>
+        <p>Promover un circuito turístico integrado que permita ampliar la permanencia de los visitantes y distribuir los beneficios del turismo entre hoteles, restaurantes, agencias, guías, artesanos, transportistas y comunidades.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">38</div>
+      <div>
+        <h3>Centro de interpretación de la cultura Nasca</h3>
+        <p>Impulsar un moderno centro cultural y de interpretación que utilice tecnología, realidad virtual, contenidos audiovisuales y experiencias inmersivas.</p>
+        <p>Permitirá explicar la historia de la cultura Nasca, sus geoglifos, acueductos, cerámica, textiles y conocimientos ancestrales.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">39</div>
+      <div>
+        <h3>Promoción nacional e internacional de Nasca</h3>
+        <p>Gestionar campañas permanentes de promoción turística, participación en ferias, alianzas con operadores y estrategias digitales que posicionen a Nasca como uno de los principales destinos culturales del Perú.</p>
+      </div>
+    </div>
+    <div class="prop">
+      <div class="prop-n">40</div>
+      <div>
+        <h3>Protección del patrimonio cultural y natural</h3>
+        <p>Promover una mayor coordinación entre el Gobierno Regional, el Ministerio de Cultura, el SERNANP, las municipalidades y la población para proteger el patrimonio arqueológico, cultural, ambiental y paisajístico de la provincia.</p>
+      </div>
+    </div>
+</div></section>
+
+
+<section class="cierre">
+  <div class="wrap">
+    <div class="eyebrow">Mensaje final</div>
+    <h2>No basta con prometer obras</h2>
+    <p>Nasca necesita una representación con experiencia, conocimiento de la administración pública y capacidad para convertir las necesidades de la población en proyectos viables.</p>
+    <p>Es necesario formularlas, conseguir presupuesto, fiscalizar su ejecución y defenderlas con firmeza ante el Gobierno Regional.</p>
+    <div class="lema">Emiliano Pillaca, experiencia para gestionar y firmeza para defender a Nasca.<br><span style="color:var(--ochre);">Por una provincia con agua, salud, educación, empleo y desarrollo.</span></div>
+    <div style="margin-top:34px;">
+      <a href="index.html#contacto" class="btn btn-primary">Súmate a la campaña</a>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--ochre); color:#fff; text-align:center; font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.1rem,3.4vw,1.9rem); padding:26px 16px;">
+  POR UNA REGIÓN CON DESARROLLO
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Emiliano Pillaca · Renovación Popular</div>
+    <nav class="links" style="font-size:0.85rem; gap:20px;">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#trayectoria">Trayectoria</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="disclaimer">Sitio de campaña. Un Consejero Regional gestiona, fiscaliza, aprueba acuerdos y asigna presupuesto; no ejecuta directamente las obras. Las propuestas expresan compromisos de gestión y fiscalización dentro de esas competencias.</div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

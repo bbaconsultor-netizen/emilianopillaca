@@ -244,6 +244,26 @@
   footer{background:var(--indigo-deep); color:rgba(239,233,221,0.7); padding:44px 0 30px; font-size:0.85rem;}
   footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; align-items:center;}
   footer .disclaimer{width:100%; margin-top:22px; font-size:0.72rem; opacity:0.55; border-top:1px solid rgba(239,233,221,0.12); padding-top:16px;}
+
+  /* EJES */
+  .ejes{display:grid; grid-template-columns:1fr; gap:1px; background:var(--line); border:1px solid var(--line);}
+  @media(min-width:640px){ .ejes{grid-template-columns:repeat(2,1fr);} }
+  @media(min-width:1000px){ .ejes{grid-template-columns:repeat(4,1fr);} }
+  .eje{background:var(--sand); padding:28px 24px; text-decoration:none; color:inherit; display:flex; flex-direction:column; transition:background .18s ease;}
+  .eje:hover{background:var(--celeste-tint);}
+  .eje-num{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ochre);}
+  .eje h3{font-size:1.02rem; margin:10px 0 10px; line-height:1.25;}
+  .eje p{font-size:0.88rem; opacity:0.75; flex:1;}
+  .eje-count{margin-top:16px; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--ochre);}
+
+  /* COMPROMISOS */
+  .compromisos{display:grid; grid-template-columns:1fr; gap:1px; background:rgba(14,147,196,0.35); border:1px solid rgba(14,147,196,0.35);}
+  @media(min-width:640px){ .compromisos{grid-template-columns:repeat(2,1fr);} }
+  @media(min-width:1000px){ .compromisos{grid-template-columns:repeat(5,1fr);} }
+  .compromiso{background:var(--indigo-deep); padding:26px 22px;}
+  .c-num{font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--ochre);}
+  .compromiso h3{font-size:1.15rem; margin:10px 0 8px; color:#fff;}
+  .compromiso p{font-size:0.87rem; color:rgba(239,233,221,0.78);}
 </style>
 </head>
 <body>
@@ -337,30 +357,81 @@
 <section id="propuestas">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Pilares de gestión</div>
-      <h2>Lo que Emiliano lleva al Gobierno Regional</h2>
+      <div class="eyebrow">Plan de trabajo · 40 propuestas</div>
+      <h2>Experiencia para gestionar, firmeza para fiscalizar</h2>
+      <p>Un plan concreto para Nasca, Vista Alegre, Marcona, Changuillo y El Ingenio, organizado en ocho ejes de trabajo.</p>
     </div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="num">01</div>
-        <h3>Control presupuestario</h3>
-        <p>Disciplina en el manejo de recursos públicos, con seguimiento riguroso de la ejecución del gasto.</p>
-      </div>
-      <div class="pillar">
-        <div class="num">02</div>
-        <h3>Innovación tecnológica</h3>
-        <p>Impulso a proyectos y programas que modernicen la gestión pública regional.</p>
-      </div>
-      <div class="pillar">
-        <div class="num">03</div>
-        <h3>Liderazgo institucional</h3>
-        <p>Organización de equipos de trabajo y análisis de procesos con enfoque sistémico.</p>
-      </div>
-      <div class="pillar">
-        <div class="num">04</div>
-        <h3>Gestión por resultados</h3>
-        <p>Diseño de procedimientos orientados al cumplimiento de objetivos y metas concretas.</p>
-      </div>
+
+    <div class="ejes">
+      <a class="eje" href="propuestas.html#eje1">
+        <div class="eje-num">Eje 1</div>
+        <h3>Salud, saneamiento y calidad de vida</h3>
+        <p>Nuevo Hospital de Nasca en Cajuca, lagunas de oxidación, centros de salud y residuos sólidos.</p>
+        <span class="eje-count">4 propuestas</span>
+      </a>
+      <a class="eje" href="propuestas.html#eje2">
+        <div class="eje-num">Eje 2</div>
+        <h3>Educación, juventud y formación para el trabajo</h3>
+        <p>Colegio Simón Rodríguez, colegios paralizados, becas técnicas y educación tecnológica.</p>
+        <span class="eje-count">4 propuestas</span>
+      </a>
+      <a class="eje" href="propuestas.html#eje3">
+        <div class="eje-num">Eje 3</div>
+        <h3>Descentralización, gestión pública y transparencia</h3>
+        <p>Autonomía de la Gerencia Subregional, Unidad Formuladora, banco de proyectos y observatorio de obras.</p>
+        <span class="eje-count">5 propuestas</span>
+      </a>
+      <a class="eje" href="propuestas.html#eje4">
+        <div class="eje-num">Eje 4</div>
+        <h3>Infraestructura, transporte y conectividad</h3>
+        <p>Muelle de Marcona, aeropuerto de Nasca, vías departamentales, vecinales y corredores productivos.</p>
+        <span class="eje-count">5 propuestas</span>
+      </a>
+      <a class="eje" href="propuestas.html#eje5">
+        <div class="eje-num">Eje 5</div>
+        <h3>Seguridad hídrica y prevención de desastres</h3>
+        <p>Represamiento de los ríos Aja, Tierras Blancas, Trancas y El Ingenio; defensas ribereñas y bocatomas.</p>
+        <span class="eje-count">7 propuestas</span>
+      </a>
+      <a class="eje" href="propuestas.html#eje6">
+        <div class="eje-num">Eje 6</div>
+        <h3>Agricultura, agroindustria y energía limpia</h3>
+        <p>Pozos con energía solar, riego tecnificado, industrialización y cadenas productivas.</p>
+        <span class="eje-count">5 propuestas</span>
+      </a>
+      <a class="eje" href="propuestas.html#eje7">
+        <div class="eje-num">Eje 7</div>
+        <h3>Empleo, emprendimiento y MYPES</h3>
+        <p>PROCOMPITE, acceso a fondos nacionales, ventanilla del emprendedor y compras públicas locales.</p>
+        <span class="eje-count">4 propuestas</span>
+      </a>
+      <a class="eje" href="propuestas.html#eje8">
+        <div class="eje-num">Eje 8</div>
+        <h3>Turismo, cultura e identidad</h3>
+        <p>DIRCETUR en Nasca, puesta en valor de atractivos, circuito Nasca–Marcona–Palpa y centro de interpretación.</p>
+        <span class="eje-count">6 propuestas</span>
+      </a>
+    </div>
+
+    <div style="text-align:center; margin-top:44px;">
+      <a href="propuestas.html" class="btn btn-primary">Ver el plan completo</a>
+    </div>
+  </div>
+</section>
+
+<section id="compromisos" style="background:var(--indigo-deep); color:var(--sand);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Cinco compromisos</div>
+      <h2>A qué me comprometo como Consejero Regional</h2>
+      <p style="color:rgba(239,233,221,0.8);">Un consejero regional no ejecuta obras: gestiona, fiscaliza, aprueba acuerdos y asigna presupuesto. Estos son los cinco compromisos que sí dependen de mí.</p>
+    </div>
+    <div class="compromisos">
+      <div class="compromiso"><span class="c-num">01</span><h3>Gestionar</h3><p>Proyectos, expedientes técnicos y presupuesto para los cinco distritos de la provincia.</p></div>
+      <div class="compromiso"><span class="c-num">02</span><h3>Fiscalizar</h3><p>Obras, contrataciones, funcionarios y decisiones del Gobierno Regional de Ica.</p></div>
+      <div class="compromiso"><span class="c-num">03</span><h3>Defender</h3><p>Los intereses de Nasca ante el Consejo Regional y las autoridades nacionales.</p></div>
+      <div class="compromiso"><span class="c-num">04</span><h3>Descentralizar</h3><p>Recuperar capacidad de decisión y participación en el presupuesto regional.</p></div>
+      <div class="compromiso"><span class="c-num">05</span><h3>Informar</h3><p>Rendir cuentas de forma permanente, no solo en campaña.</p></div>
     </div>
   </div>
 </section>
