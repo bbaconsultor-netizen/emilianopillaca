@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emiliano Pillaca — Consejero Regional de Ica</title>
+<meta name="description" content="Emiliano Pillaca, candidato a Consejero Regional por Nasca, plancha de Renovación Popular - Ica. 32 años de experiencia en gestión pública.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#EFE9DD;
+    --sand-deep:#E3DBC8;
+    --indigo:#075A7C;      /* celeste oscuro — misma familia que el logo "R" */
+    --indigo-deep:#053F58; /* celeste aún más profundo, para máximo contraste */
+    --celeste-tint:#E4F4FB; /* celeste muy claro para fondos alternos */
+    --ochre:#0E93C4; /* celeste oficial del símbolo "R" de Renovación Popular */
+    --red:#0B7BAA;   /* celeste profundo para acentos/CTA */
+    --ink:#221F1A;
+    --line:rgba(14,147,196,0.35);
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--sand);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ochre);
+  }
+
+  /* Skip link / focus */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:3px solid var(--indigo); outline-offset:2px;
+  }
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(239,233,221,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+  .brand{font-family:'Fraunces', serif; font-weight:700; font-size:1.15rem; letter-spacing:-0.01em;}
+  .brand span{color:var(--ochre);}
+  nav.links{display:flex; gap:28px; font-size:0.92rem;}
+  nav.links a{text-decoration:none; opacity:0.8; transition:opacity .2s;}
+  nav.links a:hover{opacity:1;}
+  .btn{
+    display:inline-block;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.9rem;
+    padding:11px 22px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--red); color:#fff;}
+  .btn-primary:hover{box-shadow:0 6px 18px rgba(200,16,46,0.35);}
+  .btn-ghost{background:transparent; color:var(--indigo); border-color:var(--indigo);}
+  .nav-cta{display:none;}
+  @media(min-width:760px){ .nav-cta{display:inline-block;} }
+  .menu-toggle{display:none; background:none; border:none; font-size:1.4rem;}
+  @media(max-width:759px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:var(--indigo);
+    color:var(--sand);
+    overflow:hidden;
+    padding:96px 0 80px;
+  }
+  .hero svg.lines{
+    position:absolute; inset:0; width:100%; height:100%;
+    opacity:0.5;
+  }
+  .hero-inner{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns:1fr; gap:48px; align-items:center;
+  }
+  @media(min-width:860px){
+    .hero-inner{grid-template-columns:1.15fr 0.85fr; gap:40px;}
+  }
+  .hero .eyebrow{color:var(--ochre);}
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.4rem);
+    line-height:1.02;
+    margin:14px 0 20px;
+    color:#fff;
+  }
+  .hero p.lead{
+    font-size:1.15rem;
+    max-width:52ch;
+    color:rgba(239,233,221,0.86);
+    margin-bottom:32px;
+  }
+  .hero-actions{display:flex; flex-wrap:wrap; gap:14px;}
+  .btn-on-dark{background:transparent; color:#fff; border-color:rgba(255,255,255,0.4);}
+  .btn-on-dark:hover{border-color:#fff;}
+
+  .portrait{
+    position:relative;
+    justify-self:center;
+  }
+  .portrait-frame{
+    width:min(280px, 70vw);
+    border:1px solid rgba(14,147,196,0.55);
+    padding:14px;
+    background:rgba(16,26,48,0.4);
+  }
+  .portrait-frame img{
+    filter:grayscale(0.15) contrast(1.05);
+    border:1px solid rgba(239,233,221,0.15);
+  }
+  .portrait-cap{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    color:var(--ochre);
+    text-transform:uppercase;
+    margin-top:10px;
+    text-align:center;
+  }
+
+  section{padding:88px 0;}
+  .section-head{max-width:60ch; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.6rem); margin-top:10px;}
+  .section-head p{font-size:1.02rem; opacity:0.78; margin-top:14px;}
+
+  /* TIMELINE */
+  #trayectoria{background:var(--celeste-tint);}
+  .timeline{position:relative; margin-top:10px;}
+  .timeline::before{
+    content:""; position:absolute; left:86px; top:6px; bottom:6px; width:1px;
+    background:var(--line);
+  }
+  @media(max-width:640px){ .timeline::before{left:20px;} }
+  .t-item{
+    position:relative;
+    display:grid; grid-template-columns:86px 1fr; gap:28px;
+    padding:22px 0;
+  }
+  @media(max-width:640px){
+    .t-item{grid-template-columns:20px 1fr; gap:18px;}
+    .t-item .t-year{position:absolute; top:-18px; left:0; font-size:0.68rem;}
+  }
+  .t-year{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--ochre);
+    padding-top:3px;
+  }
+  .t-dot{
+    position:absolute; left:82px; width:9px; height:9px; border-radius:50%;
+    background:var(--red); margin-top:8px;
+  }
+  @media(max-width:640px){ .t-dot{left:16px;} }
+  .t-content h3{font-size:1.08rem; font-weight:600; margin-bottom:4px;}
+  .t-content p{font-size:0.92rem; opacity:0.75;}
+
+  /* PILARES */
+  #propuestas{background:var(--sand);}
+  .pillars{
+    display:grid; grid-template-columns:1fr; gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  @media(min-width:720px){ .pillars{grid-template-columns:repeat(2, 1fr);} }
+  .pillar{background:var(--sand); padding:36px;}
+  .pillar .num{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ochre); font-size:0.8rem;
+  }
+  .pillar h3{font-size:1.2rem; margin:12px 0 10px;}
+  .pillar p{font-size:0.94rem; opacity:0.78;}
+
+  /* SOBRE */
+  #sobre{background:var(--indigo-deep); color:var(--sand);}
+  #sobre .section-head p{color:rgba(239,233,221,0.8);}
+  .credentials{display:grid; gap:18px; margin-top:36px;}
+  @media(min-width:640px){ .credentials{grid-template-columns:repeat(2,1fr);} }
+  .credential{
+    border:1px solid rgba(14,147,196,0.35);
+    padding:20px 22px;
+  }
+  .credential .k{font-family:'IBM Plex Mono', monospace; font-size:0.7rem; color:var(--ochre); text-transform:uppercase; letter-spacing:0.08em;}
+  .credential .v{margin-top:8px; font-size:0.98rem;}
+
+  /* FORM */
+  #contacto{background:var(--celeste-tint);}
+  .form-grid{display:grid; grid-template-columns:1fr; gap:48px;}
+  @media(min-width:900px){ .form-grid{grid-template-columns:0.9fr 1.1fr;} }
+  .form-side p{opacity:0.78; margin-top:14px;}
+  .form-side .contact-line{
+    margin-top:26px; font-family:'IBM Plex Mono', monospace; font-size:0.86rem;
+  }
+  form{
+    background:var(--sand);
+    border:1px solid var(--line);
+    padding:32px;
+  }
+  .field{margin-bottom:18px;}
+  .field label{display:block; font-size:0.85rem; font-weight:600; margin-bottom:6px;}
+  .field input, .field textarea, .field select{
+    width:100%;
+    font-family:'Inter', sans-serif;
+    font-size:0.95rem;
+    padding:11px 12px;
+    border:1px solid rgba(34,31,26,0.25);
+    background:#fff;
+    border-radius:var(--radius);
+  }
+  .field textarea{min-height:100px; resize:vertical;}
+  .check-row{display:flex; align-items:flex-start; gap:10px; margin-bottom:20px;}
+  .check-row input{width:auto; margin-top:4px;}
+  .check-row label{font-size:0.9rem; font-weight:400;}
+  .form-note{font-size:0.78rem; opacity:0.65; margin-top:14px;}
+  #form-status{margin-top:14px; font-size:0.9rem; display:none;}
+  #form-status.ok{color:#1a6b3a; display:block;}
+  #form-status.err{color:var(--red); display:block;}
+
+  footer{background:var(--indigo-deep); color:rgba(239,233,221,0.7); padding:44px 0 30px; font-size:0.85rem;}
+  footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; align-items:center;}
+  footer .disclaimer{width:100%; margin-top:22px; font-size:0.72rem; opacity:0.55; border-top:1px solid rgba(239,233,221,0.12); padding-top:16px;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand" style="display:flex; align-items:center; gap:10px;">
+      <span style="width:28px; height:28px; border:2px solid var(--ochre); display:inline-flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; color:var(--ochre); font-size:1rem;">R</span>
+      PILLACA <span>· ICA</span>
+    </div>
+    <nav class="links">
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#propuestas">Propuestas</a>
+      <a href="#sobre">Sobre Emiliano</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-primary nav-cta">Sé voluntario</a>
+  </div>
+</header>
+
+<section class="hero-cover" style="background:var(--indigo-deep);">
+  <img src="assets/cover-nasca.jpg" alt="Emiliano Pillaca Castilla, Renovación Popular — Construyendo el desarrollo de Nasca. Experiencia, honestidad y resultados." style="width:100%; height:auto; display:block;">
+  <div class="wrap" style="padding:26px 28px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+    <a href="#contacto" class="btn btn-primary">Quiero ser voluntario</a>
+    <a href="#trayectoria" class="btn btn-on-dark" style="border-color:rgba(255,255,255,0.4); color:#fff;">Ver trayectoria</a>
+  </div>
+</section>
+
+<section id="plancha" style="background:var(--indigo-deep); color:var(--sand); padding:56px 0;">
+  <div class="wrap">
+    <div class="eyebrow">Plancha regional 2026 — Ica</div>
+    <div style="margin-top:22px; max-width:720px;">
+      <img src="assets/banner-plancha.jpg" alt="Plancha Renovación Popular Ica: Ing. Javier Cornejo V., Gobernador Regional, y Lic. Emiliano Pillaca C., Consejero Regional por Nasca" style="width:100%; border:1px solid rgba(14,147,196,0.4);">
+    </div>
+    <div style="margin-top:26px; font-family:'Fraunces',serif; font-size:1.15rem; opacity:0.9;">"Por una región con desarrollo"</div>
+  </div>
+</section>
+
+<section id="trayectoria">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Trayectoria</div>
+      <h2>Una línea de gestión, sin interrupciones</h2>
+      <p>Más de tres décadas en cargos de dirección administrativa en salud y gobierno local en Ica — la misma disciplina de control presupuestario y gestión por resultados, cargo tras cargo.</p>
+    </div>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-year">1999–2002</div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Alcalde Distrital de Vista Alegre</h3>
+          <p>Municipalidad Distrital de Vista Alegre, Nasca.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2000–2008</div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Director Regional / Director de Administración</h3>
+          <p>Dirección Regional de Salud de Ica y Unidad Ejecutora 402 Salud Palpa–Nasca.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2015–2020</div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Director de Administración / Jefe de Unidad de Administración</h3>
+          <p>Unidad Ejecutora 402 Salud Palpa–Nasca, Dirección Regional de Salud de Ica.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">1980–2023</div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Especialista Administrativo III</h3>
+          <p>Hospital Ricardo Cruzado Rivarola de Nasca — gestión del sistema administrativo.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2002–2020</div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Presidente de comisiones institucionales</h3>
+          <p>Concursos de ascenso, nombramientos, inventarios patrimoniales y procesos administrativos disciplinarios del Hospital Ricardo Cruzado Rivarola de Nasca.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="propuestas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Pilares de gestión</div>
+      <h2>Lo que Emiliano lleva al Gobierno Regional</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="num">01</div>
+        <h3>Control presupuestario</h3>
+        <p>Disciplina en el manejo de recursos públicos, con seguimiento riguroso de la ejecución del gasto.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <h3>Innovación tecnológica</h3>
+        <p>Impulso a proyectos y programas que modernicen la gestión pública regional.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <h3>Liderazgo institucional</h3>
+        <p>Organización de equipos de trabajo y análisis de procesos con enfoque sistémico.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">04</div>
+        <h3>Gestión por resultados</h3>
+        <p>Diseño de procedimientos orientados al cumplimiento de objetivos y metas concretas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Sobre Emiliano</div>
+      <h2>Gestor administrativo formado en Ica, para Ica</h2>
+      <p>Egresado de la Escuela de Post Grado en Administración con mención en Gestión Empresarial de la Universidad Nacional "San Luis Gonzaga" de Ica, con colegiatura activa y habilitación vigente ante el Colegio Regional de Licenciados en Administración de Ica.</p>
+    </div>
+    <div class="credentials">
+      <div class="credential">
+        <div class="k">Formación</div>
+        <div class="v">Bachiller y Licenciado en Administración — UNSLG Ica</div>
+      </div>
+      <div class="credential">
+        <div class="k">Posgrado</div>
+        <div class="v">Egresado de Maestría en Administración, mención Gestión Empresarial</div>
+      </div>
+      <div class="credential">
+        <div class="k">Colegiatura</div>
+        <div class="v">CLAD N.º 733 — Colegio Regional de Licenciados en Administración de Ica</div>
+      </div>
+      <div class="credential">
+        <div class="k">Habilitación</div>
+        <div class="v">Certificado N.º 249-2023-CDRI-CORLAD-ICA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap form-grid">
+    <div class="form-side">
+      <div class="eyebrow">Súmate</div>
+      <h2>Sé parte del equipo</h2>
+      <p>Deja tus datos si quieres ser voluntario, recibir novedades de la campaña o hacernos llegar una consulta. Te contactaremos directamente.</p>
+      <div class="contact-line">📍 Nasca, Ica</div>
+      <div class="contact-line">📞 956 075 978</div>
+      <div class="contact-line">✉️ contacto@pillacaporica.pe</div>
+      <div class="contact-line">📘 <a href="https://www.facebook.com/emiliano.pillaca.5" target="_blank" rel="noopener">facebook.com/emiliano.pillaca.5</a></div>
+    </div>
+    <form id="volunteer-form">
+      <div class="field">
+        <label for="nombre">Nombre completo *</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="field">
+        <label for="telefono">Celular / WhatsApp *</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+      <div class="field">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="field">
+        <label for="distrito">Distrito</label>
+        <select id="distrito" name="distrito">
+          <option value="">Selecciona tu distrito</option>
+          <option>Ica</option>
+          <option>Nasca</option>
+          <option>Palpa</option>
+          <option>Chincha</option>
+          <option>Pisco</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos cómo quieres apoyar..."></textarea>
+      </div>
+      <div class="check-row">
+        <input type="checkbox" id="voluntario" name="voluntario">
+        <label for="voluntario">Quiero registrarme como voluntario de la campaña</label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Enviar</button>
+      <div id="form-status"></div>
+      <div class="form-note">Al enviar aceptas ser contactado por el equipo de campaña de Emiliano Pillaca. No compartimos tus datos con terceros.</div>
+    </form>
+  </div>
+</section>
+
+<div style="background:var(--ochre); color:#fff; text-align:center; font-family:'Fraunces',serif; font-weight:700; font-size:clamp(1.1rem,3.4vw,1.9rem); padding:26px 16px;">
+  POR UNA REGIÓN CON DESARROLLO
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Emiliano Pillaca · Renovación Popular</div>
+    <nav class="links" style="font-size:0.85rem; gap:20px;">
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#propuestas">Propuestas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="disclaimer">Sitio de campaña. Contenido elaborado con base en la hoja de vida documentada del candidato. Sujeto a actualización durante el proceso electoral.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const form = document.getElementById('volunteer-form');
+const status = document.getElementById('form-status');
+
+// ─────────────────────────────────────────────────────────────
+// CONFIGURA AQUÍ tu endpoint de formulario (ver README.md)
+// Opción rápida y gratuita: Formspree (https://formspree.io)
+// Reemplaza "TU_FORM_ID" luego de crear tu formulario en Formspree.
+// ─────────────────────────────────────────────────────────────
+const FORM_ENDPOINT = "https://formspree.io/f/TU_FORM_ID";
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  status.className = '';
+  status.style.display = 'none';
+
+  const data = new FormData(form);
+  const payload = Object.fromEntries(data.entries());
+  payload.voluntario = form.voluntario.checked ? "Sí" : "No";
+
+  if (FORM_ENDPOINT.includes("TU_FORM_ID")) {
+    status.textContent = "⚠ Falta configurar el endpoint del formulario. Revisa README.md para conectarlo a Formspree o Supabase.";
+    status.className = "err";
+    return;
+  }
+
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Accept": "application/json", "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (res.ok) {
+      form.reset();
+      status.textContent = "¡Gracias! Hemos recibido tus datos, pronto te contactaremos.";
+      status.className = "ok";
+    } else {
+      throw new Error("Respuesta no exitosa");
+    }
+  } catch (err) {
+    status.textContent = "No pudimos enviar el formulario. Intenta de nuevo o escríbenos por WhatsApp.";
+    status.className = "err";
+  }
+});
+</script>
+
+</body>
+</html>
