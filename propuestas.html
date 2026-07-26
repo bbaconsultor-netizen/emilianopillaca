@@ -244,6 +244,16 @@
   footer{background:var(--indigo-deep); color:rgba(239,233,221,0.7); padding:44px 0 30px; font-size:0.85rem;}
   footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; align-items:center;}
   footer .disclaimer{width:100%; margin-top:22px; font-size:0.72rem; opacity:0.55; border-top:1px solid rgba(239,233,221,0.12); padding-top:16px;}
+
+  /* Marca con nombre completo — ajuste responsive */
+  @media(max-width:759px){
+    .brand span[style*="1.02rem"]{font-size:0.82rem !important;}
+    .brand span[style*="0.68rem"]{font-size:0.6rem !important;}
+    .nav-inner{gap:12px;}
+  }
+  @media(max-width:400px){
+    .brand span[style*="1.02rem"]{font-size:0.72rem !important;}
+  }
 </style>
 
 <style>
@@ -278,7 +288,10 @@
   <div class="wrap nav-inner">
     <div class="brand" style="display:flex; align-items:center; gap:10px;">
       <span style="width:28px; height:28px; border:2px solid var(--ochre); display:inline-flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; color:var(--ochre); font-size:1rem;">R</span>
-      <a href="index.html" style="text-decoration:none; color:inherit;">PILLACA <span>· ICA</span></a>
+      <a href="index.html" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; line-height:1.15;">
+        <span style="font-size:1.02rem;">EMILIANO PILLACA</span>
+        <span style="font-family:'Inter',sans-serif; font-weight:500; font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase; color:var(--ochre);">Consejero Regional por Nasca</span>
+      </a>
     </div>
     <nav class="links">
       <a href="index.html#trayectoria">Trayectoria</a>
